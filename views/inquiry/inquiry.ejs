@@ -1,0 +1,93 @@
+<%- include("../_partial/_header") -%>
+
+    <!-- start page title -->
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item">
+                            <a href="javascript: void(0);"></a>
+                        </li>
+
+                        <li class="breadcrumb-item active">Inquiry</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">All Inquiry Details</h4>
+            </div>
+        </div>
+    </div>
+    <!-- end page title -->
+
+    <div class="row mb-2">
+        <div class="col-12">
+            <a href="/inquiry/add-inquiry"><button type="button" class="btn btn-soft-primary waves-effect waves-light float-end">Add Inquiry</button></a></div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <!-- <h4 class="header-title"></h4> -->
+
+                    <table id="datatable-buttons" class="table dt-responsive nowrap w-100">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Purpose</th>
+                                <th>Country</th>
+                                <th>Assign To</th>
+                                <th>Added By</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <% for (let i = 0; i < 10; i++) { %>
+
+
+
+                                <tr>
+                                    <td>27 May, 2022</td>
+                                    <td>
+                                        <%= "FI_20" + i %>
+                                    </td>
+                                    <td>Rikin Patel</td>
+                                    <td>Coaching</td>
+                                    <td>Canada</td>
+                                    <td>Leena Ma'am</td>
+                                    <td>Virtual QR Nikol</td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <% } %>
+                        </tbody>
+                    </table>
+
+                </div>
+                <!-- end card body-->
+            </div>
+            <!-- end card -->
+        </div>
+        <!-- end col-->
+    </div>
+
+    <%- include("../_partial/_footer") -%>

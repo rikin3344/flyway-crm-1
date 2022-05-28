@@ -1,0 +1,354 @@
+<%- include("../_partial/_header") -%>
+
+    <!-- start page title -->
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+
+                        <li class="breadcrumb-item active">Add Inquiry</li>
+                        <li class="breadcrumb-item">
+                            <a href="/inquiry">Inquiry</a>
+                        </li>
+                    </ol>
+                </div>
+                <h4 class="page-title">All Inquiry Details</h4>
+            </div>
+        </div>
+    </div>
+    <!-- end page title -->
+
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- <h4 class="header-title mb-4">Add New Inquiry</h4> -->
+
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="nav flex-column nav-pills nav-pills-tab" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <a class="nav-link active show mb-1" id="v-pills-basic-tab" data-bs-toggle="pill" href="#v-pills-basic" role="tab" aria-controls="v-pills-basic" aria-selected="true">
+                                Basic Details</a>
+                            <a class="nav-link mb-1" id="v-pills-personal-tab" data-bs-toggle="pill" href="#v-pills-personal" role="tab" aria-controls="v-pills-personal" aria-selected="false">
+                                Personal Details</a>
+                            <a class="nav-link mb-1" id="v-pills-education-tab" data-bs-toggle="pill" href="#v-pills-education" role="tab" aria-controls="v-pills-education" aria-selected="false">
+                                Education Details</a>
+                            <a class="nav-link mb-1" id="v-pills-settings-tab" data-bs-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                                Settings</a>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <div class="col-sm-9">
+                        <div class="tab-content pt-0">
+                            <div class="tab-pane fade active show" id="v-pills-basic" role="tabpanel" aria-labelledby="v-pills-basic-tab">
+                                <div class="row">
+                                    <div class="col-6 mb-3">
+                                        <label class="form-label">Date</label>
+                                        <input type="text" id="basic-datepicker" class="form-control" placeholder="Basic datepicker">
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label for="simpleinput" class="form-label">Inquiry Id</label>
+                                        <input type="text" id="simpleinput" class="form-control readonly" placeholder=" Generate After Submit" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Inquiry Purpose</label>
+
+                                            <select class="form-control" data-toggle="select2" id="inquiryPurpose" data-width="100%" onchange="addDivData(this.value)">
+                                                <option value="0">None</option>
+                                                <option value="1">Coaching</option>
+                                                <option value="2">Student Visa</option>
+                                                <option value="3">PR Visa</option>
+                                                <option value="4">Visitor Visa</option>
+                                                <option value="5">Work Visa</option>
+                                                <option value="6">Dependent Visa</option>
+                                                <option value="7">Business Visa</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6" id="coaching_div" style="display: none;">
+                                        <div class="mb-3">
+                                            <label class="form-label">Coaching Type</label>
+
+                                            <select class="form-control" data-toggle="select2" id="coaching_type" data-width="100%">
+                                                
+                                                <option value="1">IELTS</option>
+                                                <option value="2">Online IELTS</option>
+                                                <option value="3">PTE</option>
+                                                <option value="4">UKVI</option>
+                                                <option value="5">TOEFEL</option>
+                                                <option value="6">Duolingo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row" id="other_details" style="display: none;">
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Country</label>
+
+                                            <select class="form-control" data-toggle="select2" id="country" data-width="100%">
+                                                
+                                                <option value="1">USA</option>
+                                                <option value="2">Canada</option>
+                                                <option value="3">UK</option>
+                                                <option value="4">Europe</option>
+                                                <option value="5">Aus</option>
+                                                <option value="6">NZ</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Inquiry Type</label>
+
+                                            <select class="form-control" data-toggle="select2" id="inquiry_type" data-width="100%">
+                                                
+                                                <option value="1">Open</option>
+                                                <option value="2">Close</option>
+                                                <option value="3">Hold</option>
+                                                <option value="4">Registered</option>
+                                                <option value="5">Admission</option>
+                                                <option value="6">Drop</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- end col -->
+                            </div>
+
+                            <div class="tab-pane fade" id="v-pills-personal" role="tabpanel" aria-labelledby="v-pills-personal-tab">
+
+                                <div class="row">
+                                    <div class="col-6 mb-3">
+                                        <label for="simpleinput" class="form-label">First Name</label>
+                                        <input type="text" id="" class="form-control readonly" placeholder="John">
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label for="simpleinput" class="form-label">Last Name</label>
+                                        <input type="text" id="" class="form-control readonly" placeholder="Charles">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6 mb-3">
+                                        <label for="simpleinput" class="form-label">Email</label>
+                                        <input type="text" id="" class="form-control" placeholder="xyz@example.com">
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label class="form-label">Date of Birth</label>
+                                        <input type="text" id="humanfd-datepicker" class="form-control" placeholder="May 10, 2022">
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6 mb-3">
+                                        <label for="simpleinput" class="form-label">Mobile Number</label>
+                                        <input type="text" id="" class="form-control" placeholder="9876543210">
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label for="simpleinput" class="form-label">Whatsapp Number</label>
+                                        <input type="text" id="" class="form-control" placeholder="9876543210">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-4 mb-3">
+                                        <label for="simpleinput" class="form-label">Area</label>
+                                        <input type="text" id="" class="form-control" placeholder="Nikol">
+                                    </div>
+                                    <div class="col-4 mb-3">
+                                        <label for="simpleinput" class="form-label">City</label>
+                                        <input type="text" id="" class="form-control" placeholder="Ahmedabad">
+                                    </div>
+                                    <div class="col-4 mb-3">
+                                        <label for="simpleinput" class="form-label">Zip Code</label>
+                                        <input type="text" id="" class="form-control" placeholder="382350">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Gender</label>
+
+                                            <select class="form-control" data-toggle="select2" id="gender" data-width="100%">
+                                                
+                                                <option value="1">Male</option>
+                                                <option value="2">Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Marital Status</label>
+
+                                            <select class="form-control" data-toggle="select2" id="marital_status" data-width="100%">
+                                                
+                                                <option value="1">Married</option>
+                                                <option value="2">Unmarried</option>
+                                                <option value="3">Divorced</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane fade" id="v-pills-education" role="tabpanel" aria-labelledby="v-pills-education-tab">
+
+                                <div class="card mb-3">
+                                    <a class="text-dark" data-bs-toggle="collapse" href="#edu1" aria-expanded="true">
+                                        <div class="card-header" id="headingOne">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h5 class="m-0" id="heading1">Add New Education details</h5>
+                                                </div>
+
+                                                <div class="col-4">
+                                                    <button type="button" class="btn btn-light waves-effect float-end btn-xs text-primary" onclick="tempCheck('edu data')"><b>Save</b></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <div id="edu1" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Level</label>
+
+                                                        <select class="form-control" data-toggle="select2" id="eduLevel1" data-width="100%" onchange="editHeadingTitle(this.value)">
+                                                            <option value="">None</option>
+                                                            <option value="10TH">10TH</option>
+                                                            <option value="12TH">12TH</option>
+                                                            <option value="Bachelors">Bachelors</option>
+                                                            <option value="Master">Master</option>
+                                                            <option value="Diploma">Diploma</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6 mb-3">
+                                                    <label for="simpleinput" class="form-label">Stream (Field)</label>
+                                                    <input type="text" id="simpleinput" class="form-control" placeholder=" Computer Technology">
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-4 mb-3">
+                                                    <label for="simpleinput" class="form-label">Starting Year</label>
+                                                    <input type="text" id="simpleinput" class="form-control" placeholder="2018">
+                                                </div>
+
+                                                <div class="col-4 mb-3">
+                                                    <label for="simpleinput" class="form-label">Ending Year</label>
+                                                    <input type="text" id="simpleinput" class="form-control" placeholder="2021">
+                                                </div>
+
+                                                <div class="col-4 mb-3">
+                                                    <label for="simpleinput" class="form-label">Result</label>
+                                                    <input type="text" id="simpleinput" class="form-control" placeholder="78.98">
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-8 mb-3">
+                                                    <label for="simpleinput" class="form-label">University / Institute</label>
+                                                    <input type="text" id="simpleinput" class="form-control" placeholder="GLS University">
+                                                </div>
+
+                                                <div class="col-4 mb-3">
+                                                    <label for="simpleinput" class="form-label">Backlogs</label>
+                                                    <input type="text" id="simpleinput" class="form-control" placeholder="0">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="eduLayout">
+
+                                </div>
+
+                                <div class="button-list pe-xl-4 d-grid">
+                                    <button type="button" class="btn btn-lg btn-primary waves-effect waves-light" onclick="addNewEduDetails()">Add New Education Details</button>
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                                <p>Eu dolore ea ullamco dolore Lorem id cupidatat excepteur reprehenderit consectetur elit id dolor proident in cupidatat officia. Voluptate excepteur commodo labore nisi cillum duis aliqua do. Aliqua amet qui mollit consectetur
+                                    nulla mollit velit aliqua veniam nisi id do Lorem deserunt amet. Culpa ullamco sit adipisicing labore officia magna elit nisi in aute tempor commodo eiusmod.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                </div>
+                <!-- end row-->
+            </div>
+        </div>
+        <!-- end card-->
+    </div>
+
+    <script>
+        function addDivData(inquiryPurposeId) {
+            var coachingDiv = document.getElementById("coaching_div");
+            var othersDiv = document.getElementById("other_details");
+
+            if (inquiryPurposeId == 1) {
+                coachingDiv.style.display = 'block';
+                othersDiv.style.display = 'flex';
+            } else if (inquiryPurposeId == 0) {
+                coachingDiv.style.display = 'none';
+                othersDiv.style.display = 'none';
+            } else {
+                coachingDiv.style.display = 'none';
+                othersDiv.style.display = 'flex';
+
+            }
+
+        }
+
+        function editHeadingTitle(id) {
+            var heading1 = document.getElementById("heading1");
+            if (id == '') {
+
+
+                heading1.innerHTML = "Add New Education details";
+            } else {
+
+                heading1.innerHTML = id + " Details";
+            }
+
+        }
+
+        function tempCheck(data) {
+            alert(data);
+        }
+        var eduLayout = document.getElementById('eduLayout');
+        var eduLayoutCount = 1;
+
+        function addNewEduDetails() {
+            edu
+
+        }
+    </script>
+    <%- include("../_partial/_footer") -%>

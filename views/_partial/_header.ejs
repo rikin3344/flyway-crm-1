@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />`
+    <title>CRM | Flyway</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="ABDevops" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- Plugins css -->
+    <link href="/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
+    <link href="/libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css" />
+
+    <!-- third party css -->
+
+    <link href="/libs/mohithg-switchery/switchery.min.css" rel="stylesheet" type="text/css" />
+    <link href="/libs/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
+    <link href="/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="/libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css" />
+    <link href="/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
+    <link href="/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="/libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css" />
+    <link href="/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
+    <link href="/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+    <link href="/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+    <link href="/libs/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+    <link href="/libs/datatables.net-select-bs5/css//select.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+    <!-- third party css end -->
+
+    <!-- App css -->
+    <link href="/css/config/saas/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
+    <!-- icons -->
+    <link href="/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<!-- body start -->
+
+<body class="loading" data-layout-mode="two-column" data-layout-color="light" data-layout-width="fluid" data-topbar-color="light" data-leftbar-color="light" data-sidebar-user='false'>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Topbar Start -->
+        <div class="navbar-custom" style="margin-top: -21px;">
+            <div class="container-fluid">
+                <ul class="list-unstyled topnav-menu float-end mb-0">
+
+                    <li class="d-none d-lg-block">
+                        <form class="app-search">
+                            <div class="app-search-box dropdown">
+                                <div class="input-group">
+                                    <input type="search" class="form-control" placeholder="Search..." id="top-search">
+                                    <button class="btn input-group-text" type="submit">
+                                <i class="fe-search"></i>
+                            </button>
+                                </div>
+                                <div class="dropdown-menu dropdown-lg" id="search-dropdown">
+                                    <!-- item-->
+                                    <div class="dropdown-header noti-title">
+                                        <h5 class="text-overflow mb-2">Found 22 results</h5>
+                                    </div>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="fe-home me-1"></i>
+                                        <span>Analytics Report</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="fe-aperture me-1"></i>
+                                        <span>How can I help you?</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="fe-settings me-1"></i>
+                                        <span>User profile settings</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <div class="dropdown-header noti-title">
+                                        <h6 class="text-overflow mb-2 text-uppercase">Users</h6>
+                                    </div>
+
+                                    <div class="notification-list">
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="d-flex align-items-start">
+                                                <img class="d-flex me-2 rounded-circle" src="/images/users/user-2.jpg" alt="Generic placeholder image" height="32">
+                                                <div class="w-100">
+                                                    <h5 class="m-0 font-14">Erwin E. Brown</h5>
+                                                    <span class="font-12 mb-0">UI Designer</span>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="d-flex align-items-start">
+                                                <img class="d-flex me-2 rounded-circle" src="/images/users/user-5.jpg" alt="Generic placeholder image" height="32">
+                                                <div class="w-100">
+                                                    <h5 class="m-0 font-14">Jacob Deo</h5>
+                                                    <span class="font-12 mb-0">Developer</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+
+                    <li class="dropdown d-inline-block d-lg-none">
+                        <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <i class="fe-search noti-icon"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-lg dropdown-menu-end p-0">
+                            <form class="p-3">
+                                <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                            </form>
+                        </div>
+                    </li>
+
+                    <li class="dropdown d-none d-lg-inline-block">
+                        <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="fullscreen" href="#">
+                            <i class="fe-maximize noti-icon"></i>
+                        </a>
+                    </li>
+
+                    <li class="dropdown notification-list topbar-dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" href="#">
+                            <i class="fe-message-square noti-icon"></i>
+                            <span class="badge bg-danger rounded-circle noti-icon-badge">9</span>
+                        </a>
+                    </li>
+
+                    <li class="dropdown notification-list topbar-dropdown">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <i class="fe-bell noti-icon"></i>
+                            <span class="badge bg-danger rounded-circle noti-icon-badge">9</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-lg">
+
+                            <!-- item-->
+                            <div class="dropdown-item noti-title">
+                                <h5 class="m-0">
+                                    <span class="float-end">
+                                <a href="" class="text-dark">
+                                    <small>Clear All</small>
+                                </a>
+                            </span>Notification
+                                </h5>
+                            </div>
+
+                            <div class="noti-scroll" data-simplebar>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                    <div class="notify-icon">
+                                        <img src="/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                    <p class="notify-details">Cristina Pride</p>
+                                    <p class="text-muted mb-0 user-msg">
+                                        <small>Hi, How are you? What about our next meeting</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-primary">
+                                        <i class="mdi mdi-comment-account-outline"></i>
+                                    </div>
+                                    <p class="notify-details">Caleb Flakelar commented on Admin
+                                        <small class="text-muted">1 min ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon">
+                                        <img src="/images/users/user-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                    <p class="notify-details">Karen Robinson</p>
+                                    <p class="text-muted mb-0 user-msg">
+                                        <small>Wow ! this admin looks good and awesome design</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-warning">
+                                        <i class="mdi mdi-account-plus"></i>
+                                    </div>
+                                    <p class="notify-details">New user registered.
+                                        <small class="text-muted">5 hours ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-info">
+                                        <i class="mdi mdi-comment-account-outline"></i>
+                                    </div>
+                                    <p class="notify-details">Caleb Flakelar commented on Admin
+                                        <small class="text-muted">4 days ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-secondary">
+                                        <i class="mdi mdi-heart"></i>
+                                    </div>
+                                    <p class="notify-details">Carlos Crouch liked
+                                        <b>Admin</b>
+                                        <small class="text-muted">13 days ago</small>
+                                    </p>
+                                </a>
+                            </div>
+
+                            <!-- All-->
+                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                        View all
+                        <i class="fe-arrow-right"></i>
+                    </a>
+
+                        </div>
+                    </li>
+
+                    <li class="dropdown notification-list topbar-dropdown">
+                        <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="/images/users/user-9.jpg" alt="user-image" class="rounded-circle">
+                            <span class="pro-user-name ms-1">
+                        James <i class="mdi mdi-chevron-down"></i> 
+                    </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end profile-dropdown ">
+                            <!-- item-->
+                            <div class="dropdown-header noti-title">
+                                <h6 class="text-overflow m-0">Welcome !</h6>
+                            </div>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="fe-user"></i>
+                                <span>My Account</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="fe-settings"></i>
+                                <span>Settings</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="fe-lock"></i>
+                                <span>Lock Screen</span>
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="fe-log-out"></i>
+                                <span>Logout</span>
+                            </a>
+
+                        </div>
+                    </li>
+
+                    <li class="dropdown notification-list">
+                        <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect waves-light">
+                            <i class="fe-settings noti-icon"></i>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- LOGO -->
+                <div class="logo-box">
+                    <a href="index.html" class="logo logo-dark text-center">
+                        <span class="logo-sm">
+                    <img src="/images/logo-sm.png" alt="" height="22">
+                    <!-- <span class="logo-lg-text-light">UBold</span> -->
+                        </span>
+                        <span class="logo-lg">
+                    <img src="/images/logo-dark-2.png" alt="" height="20">
+                    <!-- <span class="logo-lg-text-light">U</span> -->
+                        </span>
+                    </a>
+
+                    <a href="index.html" class="logo logo-light text-center">
+                        <span class="logo-sm">
+                    <img src="/images/logo-sm.png" alt="" height="22">
+                </span>
+                        <span class="logo-lg">
+                    <img src="/images/logo-light-2.png" alt="" height="20">
+                </span>
+                    </a>
+                </div>
+
+                <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                    <li>
+                        <button class="button-menu-mobile waves-effect waves-light">
+                    <i class="fe-menu"></i>
+                </button>
+                    </li>
+
+                    <li>
+                        <!-- Mobile menu toggle (Horizontal Layout)-->
+                        <a class="navbar-toggle nav-link" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </li>
+
+                    <li class="dropdown d-none d-xl-block">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                    Create New
+                    <i class="mdi mdi-chevron-down"></i> 
+                </a>
+                        <div class="dropdown-menu">
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="fe-briefcase me-1"></i>
+                                <span>New Inquiry</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="fe-user me-1"></i>
+                                <span>Create Users</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="fe-bar-chart-line- me-1"></i>
+                                <span>New Invoice</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="fe-settings me-1"></i>
+                                <span>Book IELTS Test</span>
+                            </a>
+
+                        </div>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- end Topbar -->
+
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+
+            <div class="h-100">
+
+                <div class="sidebar-content">
+                    <div class="sidebar-icon-menu h-100" data-simplebar>
+                        <!-- LOGO -->
+                        <a href="index.html" class="logo">
+                            <span>
+                          <img src="/images/logo-sm-light.png" alt="" height="28">
+                      </span>
+                        </a>
+                        <nav class="nav flex-column" id="two-col-sidenav-main">
+                            <a class="nav-link" href="#dashboard" title="Dashboard">
+                                <i data-feather="home"></i>
+                            </a>
+                            <a class="nav-link" href="#inquiry" title="Inquiry">
+                                <i data-feather="grid"></i>
+                            </a>
+                            <a class="nav-link" href="#ielts" title="IELTS">
+                                <i data-feather="file-text"></i>
+                            </a>
+                            <a class="nav-link" href="#visa" title="VISA">
+                                <i data-feather="layout"></i>
+                            </a>
+                            <a class="nav-link" href="#others" title="Others">
+                                <i data-feather="briefcase"></i>
+                            </a>
+                            <a class="nav-link" href="#finance" title="Finance">
+                                <i data-feather="package"></i>
+                            </a>
+                        </nav>
+                    </div>
+                    <!--- Sidemenu -->
+                    <div class="sidebar-main-menu">
+                        <div id="two-col-menu" class="h-100" data-simplebar>
+                            <div class="twocolumn-menu-item d-block" id="dashboard">
+                                <div class="title-box">
+                                    <h5 class="menu-title">Basics</h5>
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/dashboard">Dashboard</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/token">Token</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/follow-ups">Follow Ups</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/demo">Demo</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/task">Task</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/notification">Notification</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/interview">Interview</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="twocolumn-menu-item" id="inquiry">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/inquiry">Inquiry </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Counselling</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Coaching</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="twocolumn-menu-item" id="ielts">
+                                <div class="title-box">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Mock Test</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Exam Date</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Running Coaching</a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="twocolumn-menu-item" id="visa">
+                                <div class="title-box">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Admission Student</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Visa</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Course Finder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="twocolumn-menu-item" id="others">
+                                <div class="title-box">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Chat</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Invoice</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Desk Aid</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Library Handling</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Entrance Exam</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Attendance Report</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="twocolumn-menu-item" id="finance">
+                                <div class="title-box">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">KhataBook</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Reports</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Commission Master</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End Sidebar -->
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
